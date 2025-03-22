@@ -87,8 +87,8 @@ const modules = [Navigation, Pagination]
         }
 
         .overlay {
-            width: calc(100% - 80px);
-            padding: 40px;
+            width: calc(100% - 60px);
+            padding: 30px;
             top: 0;
             background-color: rgba(2,78,123,0.4);
 
@@ -98,6 +98,12 @@ const modules = [Navigation, Pagination]
 
             @media screen and (min-width: 1024px) {
                 padding-top: 25vh;
+            }
+
+            @media screen and (min-width: 1400px) {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
 
