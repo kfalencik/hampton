@@ -1,5 +1,5 @@
 <template>
-    <div class="slideshow w-full flex relative">
+    <section class="slideshow w-full flex relative p-0">
         <swiper
             class="h-full"
             :modules="modules"
@@ -30,7 +30,7 @@
                 <li><a href="#" class="bi-instagram"></a></li>
             </ul>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

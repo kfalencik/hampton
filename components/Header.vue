@@ -8,7 +8,7 @@
                     </NuxtLink>
                     <div class="grow"></div>
                     <div>
-                        <NuxtLink v-for="(link, index) in menuLinks" class="ml-10" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': activeLink === index}">{{ link.name }}</NuxtLink>
+                        <NuxtLink v-for="(link, index) in menuLinks" class="ml-10" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': `#${activeLink}` === link.link || !activeLink && index === 0}">{{ link.name }}</NuxtLink>
                     </div>
                 </nav>
             </div>
@@ -18,9 +18,10 @@
                         <NuxtLink class="grow mr-20" to="/">
                             <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                         </NuxtLink>
+                        {{ activeLink }}
                         <div class="grow"></div>
                         <div>
-                            <NuxtLink v-for="(link, index) in menuLinks" class="ml-10" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': activeLink === index}">{{ link.name }}</NuxtLink>
+                            <NuxtLink v-for="(link, index) in menuLinks" class="ml-10" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': `#${activeLink}` === link.link || !activeLink && index === 0}">{{ link.name }}</NuxtLink>
                         </div>
                     </nav>
                 </div>
@@ -34,7 +35,7 @@
                 <button class="z-55" @click="mobileMenu = !mobileMenu"><i :class="`${mobileMenu ? 'bi-x-lg' : 'bi-list'} text-3xl`"></i></button>
                 <div v-if="mobileMenu" class="overlay fixed left-0 top-0 bottom-0 right-0 z-50 overflow-hidden" @click="mobileMenu = !mobileMenu">
                     <nav class="mt-30 flex flex-col text-center text-2xl">
-                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" class="text-white my-3":class="{'text-primary': activeLink === index}">{{ link.name }}</NuxtLink>
+                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" class=" my-3" :class="`#${activeLink}` === link.link || !activeLink && index === 0 ? 'text-accent' : 'text-white'">{{ link.name }}</NuxtLink>
                     </nav>
                 </div>
             </div>
@@ -42,7 +43,7 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
 
     const viewport = useViewport()
 
@@ -51,6 +52,10 @@
     const activeLink = ref(0)
     const scrollPosition = ref(0)
     const prevScrollPosition = ref(0)
+
+    const hash = computed(() => {
+        return window ? window.location.hash : null
+    })
 
     const menuLinks = [
         {
@@ -79,6 +84,15 @@
         prevScrollPosition.value = scrollPosition.value
         scrollPosition.value = window.scrollY || window.pageYOffset;
         fixed.value = scrollPosition.value > 60
+
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(function(section) {
+            let sectionPosition = section.offsetTop;
+            if (scrollPosition.value + 300 > sectionPosition) {
+                activeLink.value = section.getAttribute('id');
+            }
+        });
     };
 
     onMounted(() => {
