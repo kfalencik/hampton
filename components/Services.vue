@@ -1,12 +1,12 @@
 <template>
-    <section id="services" class="bg-lightGrey py-15" style="overflow: hidden">
+    <section id="services" class="bg-lightGrey" style="overflow: hidden">
         <div class="max-w-8xl mx-auto text-center">
             <h2 class="mb-0">Services</h2>
             <small>With years of expertise in the industry, we have successfully delivered projects of all scales and complexities. Find out what our company can do for you</small>
             <div class="services-wrapper my-4 mt-10" :class="[{'columns-2': viewport.matches('tablet', 'desktop')}, {'columns-3': viewport.isGreaterOrEquals('desktopMedium')}]">
                 <div v-for="(service, item) in services" :key="`service-${index}`" class="aspect-square py-10 text-center px-6">
                     <i class="text-5xl" :class="service.icon"></i>
-                    <h3>{{ service.heading }}</h3>
+                    <h3 class="my-4">{{ service.heading }}</h3>
                     <small>{{ service.subheading }}</small>
                 </div>
             </div>

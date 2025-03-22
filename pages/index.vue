@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="home">
         <Slideshow />
         <Hello />
         <Services />

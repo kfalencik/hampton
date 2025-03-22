@@ -77,8 +77,7 @@
     }
 
     section {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 100px 30px;
     }
 
     .divider {

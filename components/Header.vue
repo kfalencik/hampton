@@ -1,6 +1,6 @@
 <template>
-    <header id="home" class="header font-bold top-0 w-screen z-20 uppercase text-sm">
-        <template v-if="viewport.isGreaterOrEquals('desktop')">
+    <header class="header font-bold top-0 w-screen z-20 uppercase text-sm" :class="{'sticky': viewport.isLessThan('tablet')}">
+        <template v-if="viewport.isGreaterOrEquals('tablet')">
             <div class="max-w-8xl mx-auto h-full">
                 <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                     <NuxtLink to="#home">
@@ -26,15 +26,15 @@
                 </div>
             </div>
         </template>
-        <div v-else class="flex py-3 p-5 justify-between items-center h-full">
+        <div v-else class="flex py-3 p-5 justify-between items-center h-full sticky">
                 <div class="spacer" style="width: 36px;"></div>
-                <NuxtLink class="z-55" to="/">
+                <NuxtLink class="z-55" to="/" @click="mobileMenu = false">
                     <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                 </NuxtLink>
                 <button class="z-55" @click="mobileMenu = !mobileMenu"><i :class="`${mobileMenu ? 'bi-x-lg' : 'bi-list'} text-3xl`"></i></button>
-                <div v-if="mobileMenu" class="overlay fixed left-0 top-0 bottom-0 right-0 z-50 overflow-hidden">
+                <div v-if="mobileMenu" class="overlay fixed left-0 top-0 bottom-0 right-0 z-50 overflow-hidden" @click="mobileMenu = !mobileMenu">
                     <nav class="mt-30 flex flex-col text-center text-2xl">
-                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': activeLink === index}">{{ link.name }}</NuxtLink>
+                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" class="text-white my-3":class="{'text-primary': activeLink === index}">{{ link.name }}</NuxtLink>
                     </nav>
                 </div>
             </div>
@@ -55,23 +55,19 @@
     const menuLinks = [
         {
             name: 'Home',
-            link: '#home'
+            link: '/'
         },
         {
             name: 'About us',
             link: '#hello'
         },
         {
+            name: 'Services',
+            link: '#services'
+        },
+        {
             name: 'Our Team',
-            link: '#about-us'
-        },
-        {
-            name: 'Projects',
-            link: '#about-us'
-        },
-        {
-            name: 'Testimonials',
-            link: '#about-us'
+            link: '#our-team'
         },
         {
             name: 'Contact',
@@ -97,6 +93,10 @@
         transition: transform 0.3s linear;
         height: 160px;
 
+        @media screen and (max-width: 768px) {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
         &-sticky {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             position: fixed;
@@ -119,7 +119,8 @@
     }
 
     .overlay {
-        background: rgba(0,0,0,0.6);
+        background: rgba(2,78,123,0.4);
         backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 </style>
