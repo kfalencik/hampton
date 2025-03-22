@@ -4,7 +4,7 @@
             <div class="max-w-8xl mx-auto h-full">
                 <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                     <NuxtLink to="#home">
-                        <img src="/img/logo-headline.jpg" alt="Hampton Construction Group" style="height: 90px"/>
+                        <img src="/img/logo-headline.jpg" alt="Hamptons Construction Group" style="height: 90px"/>
                     </NuxtLink>
                     <div class="grow"></div>
                     <div>
@@ -16,7 +16,7 @@
                 <div class="max-w-8xl mx-auto h-full">
                     <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                         <NuxtLink class="grow mr-20" to="#home">
-                            <img src="/img/logo.jpg" alt="Hampton Construction Group" style="height: 40px"/>
+                            <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                         </NuxtLink>
                         <div class="grow"></div>
                         <div>
@@ -29,7 +29,7 @@
         <div v-else class="flex py-3 p-5 justify-between items-center h-full">
                 <div class="spacer" style="width: 36px;"></div>
                 <NuxtLink class="z-55" to="/">
-                    <img src="/img/logo.jpg" alt="Hampton Construction Group" style="height: 40px"/>
+                    <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                 </NuxtLink>
                 <button class="z-55" @click="mobileMenu = !mobileMenu"><i :class="`${mobileMenu ? 'bi-x-lg' : 'bi-list'} text-3xl`"></i></button>
                 <div v-if="mobileMenu" class="overlay fixed left-0 top-0 bottom-0 right-0 z-50 overflow-hidden">

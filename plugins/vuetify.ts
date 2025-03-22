@@ -5,7 +5,7 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 
 export default defineNuxtPlugin((app) => {
-    const hampton = {
+    const hamptons = {
         dark: false,
         colors: {
           background: '#FFFFFF',
@@ -44,9 +44,9 @@ export default defineNuxtPlugin((app) => {
 
     const vuetify = createVuetify({
     theme: {
-        defaultTheme: 'hampton',
+        defaultTheme: 'hamptons',
         themes: {
-          hampton,
+          hamptons,
         },
     }})
     app.vueApp.use(vuetify)
