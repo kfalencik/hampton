@@ -82,6 +82,18 @@
             width: 70px;
             border-top: 1px solid #e1e1e1;
         }
+
+        @media screen and (max-width: 1280px) {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     .page-enter-active,
