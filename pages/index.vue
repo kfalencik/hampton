@@ -2,6 +2,7 @@
     <div>
         <Slideshow />
         <Hello />
+        <Services />
     </div>
 </template>
 

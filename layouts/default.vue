@@ -53,7 +53,7 @@
     }
 
     h3, .h3 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     h4, .h4 {
@@ -70,6 +70,11 @@
 
     p {
         margin: 0 0 13px;
+    }
+
+    section {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .divider {

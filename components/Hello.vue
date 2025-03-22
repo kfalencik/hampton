@@ -1,5 +1,5 @@
 <template>
-    <div id="hello" :class="[{'py-20': viewport.isGreaterOrEquals('desktop')}, {'py-5': viewport.isGreaterOrEquals('mobileMedium')}]" style="overflow: hidden">
+    <section id="hello" :class="[{'py-5': viewport.isLessOrEquals('tablet')}, {'py-20': viewport.isGreaterOrEquals('desktopMedium')}]" style="overflow: hidden">
         <div class="max-w-8xl p-5 py-15 mx-auto flex flex-col relative items-center" :class="{'flex-row': viewport.isGreaterOrEquals('desktop')}">
             <div class="hello-text">
                 <div class="divider-block">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
