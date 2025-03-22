@@ -1,20 +1,22 @@
 <template>
-    <div class="max-w-8xl p-5 py-15 mx-auto flex flex-col relative items-center" :class="{'flex-row mt-20': viewport.isGreaterOrEquals('desktop')}">
-        <div class="hello-text">
-            <div class="divider-block">
-                <h2>Hampton Construction Group is a renowned construction company based in Naples, Florida</h2>
-                <div>
-                    <p class="text-black my-8">Founded by three friends who combined their unique experiences to create a company capable of handling the most demanding projects. </p>
-                    <p>We specialize in home construction and high-end renovations, with a strong emphasis on top-quality and precision. Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.</p>
+    <div id="hello" :class="{'py-20': viewport.isGreaterOrEquals('desktop')}" style="overflow: hidden">
+        <div class="max-w-8xl p-5 py-15 mx-auto flex flex-col relative items-center" :class="{'flex-row': viewport.isGreaterOrEquals('desktop')}">
+            <div class="hello-text">
+                <div class="divider-block">
+                    <h2>Hampton Construction Group is a renowned construction company based in Naples, Florida</h2>
+                    <div>
+                        <p class="text-black my-8">Founded by three friends who combined their unique experiences to create a company capable of handling the most demanding projects. </p>
+                        <p>We specialize in home construction and high-end renovations, with a strong emphasis on top-quality and precision. Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grow hello-pictures">
-            <div class="hello-pictures__picture">
-                <img class="mb-5" src="/img/hello-1.jpeg" />
-            </div>
-            <div class="hello-pictures__picture">
-                <img src="/img/hello-2.jpeg" />
+            <div class="grow hello-pictures">
+                <div class="hello-pictures__picture">
+                    <img class="mb-5" src="/img/hello-1.jpeg" />
+                </div>
+                <div class="hello-pictures__picture">
+                    <img src="/img/hello-2.jpeg" />
+                </div>
             </div>
         </div>
     </div>

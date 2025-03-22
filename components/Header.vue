@@ -59,7 +59,7 @@
         },
         {
             name: 'About us',
-            link: '#about-us'
+            link: '#hello'
         },
         {
             name: 'Our Team',
