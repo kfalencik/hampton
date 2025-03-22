@@ -37,10 +37,8 @@
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 48px;
+            font-size: 34px;
         }
-
-        
     }
 
     h2, .h2 {
@@ -111,6 +109,14 @@
         @media screen and (max-width: 768px) {
             text-align: center;
         }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: white
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: white;
     }
 
     .page-enter-active,

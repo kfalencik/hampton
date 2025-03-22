@@ -1,12 +1,14 @@
 <template>
     <div class="slideshow w-full flex relative">
         <swiper
+            :modules="modules"
             :slides-per-view="1"
+            :pagination="{ clickable: true }"
         >
             <swiper-slide v-for="(slide, index) in slides" :key="`slideshow-slide-${index}`">
                 <img :src="slide.img" />
                 <div class="overlay absolute h-full left-0">
-                    <div class="max-w-8xl mx-auto text-white">
+                    <div class="max-w-8xl mx-auto text-white px-4">
                         <div class="max-w-5xl">
                             <h1 class="text-white">{{ slide.heading }}</h1>
                             <p>{{ slide.subheading }}</p>
@@ -16,7 +18,7 @@
             </swiper-slide>
         </swiper>
         <div class="slideshow__sidebar bg-white fixed z-10 absolute flex flex-column items-center">
-            <div class="small text-black text-uppercase font-bold text-spacing-340">Hamptons Construction Group</div>
+            <div class="small text-black text-uppercase font-bold text-spacing-340 py-3">Hamptons Construction Group</div>
             <div class="divider divider--vertical"></div>
             <ul class="list text-center">
                 <li><a href="#" class="bi-facebook"></a></li>
@@ -31,9 +33,14 @@
 <script setup>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination } from  'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const viewport = useViewport()
 
 const slides = ref([
     {
@@ -55,11 +62,29 @@ const slides = ref([
         link: false
     }
 ])
+
+const modules = [Navigation, Pagination]
 </script>
 
-<style scoped>
+<style>
     .slideshow {
         height: calc(100vh - 160px);
+
+        .swiper-button-prev {
+            left: 25px;
+        }
+
+        .swiper-button-next {
+            right: 25px;
+        }
+
+        .swiper-pagination {
+            bottom: 10px !important;
+
+            @media screen and (min-width: 1024px) {
+                bottom: 60px !important;
+            }
+        }
 
         .overlay {
             width: calc(100% - 80px);
@@ -67,15 +92,20 @@ const slides = ref([
             top: 0;
             background-color: rgba(2,78,123,0.4);
 
-            @media screen and (min-width: 1024px) {
-                width: calc(100% - 160px);
-                padding-left: 120px;
-                padding-top: 25vh;
+            @media screen and (min-width: 768px) {
+                padding-top: 15vh;
             }
 
-            @media screen and (min-width: 1600px) {
-                padding-left: 100px;
-                width: calc(100% - 140px);
+            @media screen and (min-width: 1024px) {
+                padding-top: 25vh;
+            }
+        }
+
+        .swiper {
+            margin-left: 6.25vw;
+
+            @media screen and (max-width: 1024px) {
+                margin-left: 0;
             }
         }
     
