@@ -48,12 +48,16 @@
         letter-spacing: -.03em;
 
         @media screen and (max-width: 768px) {
-            font-size: 28px;
+            font-size: 30px;
         }
     }
 
     h3, .h3 {
-        font-size: 26px;
+        font-size: 28px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     h4, .h4 {

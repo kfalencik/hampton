@@ -1,5 +1,5 @@
 <template>
-    <section id="services" class="bg-lightGrey" :class="[{'py-5': viewport.isLessOrEquals('tablet')}, {'py-20': viewport.isGreaterOrEquals('desktop')}]" style="overflow: hidden">
+    <section id="services" class="bg-lightGrey py-15" style="overflow: hidden">
         <div class="max-w-8xl mx-auto text-center">
             <h2 class="mb-0">Services</h2>
             <small>With years of expertise in the industry, we have successfully delivered projects of all scales and complexities. Find out what our company can do for you</small>
