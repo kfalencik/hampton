@@ -59,9 +59,29 @@
 
     .divider {
         margin: 25px 0;
-        height: 70px;
-        width: 1px;
-        border-left: 1px solid #e1e1e1;
+        width: 70px;
+        height: 1px;
+        border-top: 1px solid #e1e1e1;
+
+        &--vertical {
+            height: 70px;
+            width: 1px;
+            border-left: 1px solid #e1e1e1;
+        }
+    }
+
+    .divider-block {
+        padding-left: 125px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 23px;
+            left: 0;
+            width: 70px;
+            border-top: 1px solid #e1e1e1;
+        }
     }
 
     .page-enter-active,

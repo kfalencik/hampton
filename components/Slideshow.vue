@@ -9,7 +9,7 @@
         </swiper>
         <div class="slideshow__sidebar bg-white fixed z-10 absolute flex flex-column items-center">
             <div class="small text-black text-uppercase font-bold text-spacing-340">Hamptons Construction Group</div>
-            <div class="divider"></div>
+            <div class="divider divider--vertical"></div>
             <ul class="list text-center">
                 <li><a href="#" class="bi-facebook"></a></li>
                 <li><a href="#" class="bi-twitter"></a></li>
