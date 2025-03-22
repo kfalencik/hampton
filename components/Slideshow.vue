@@ -74,6 +74,24 @@ const slides = ref([
                 top: auto;
                 bottom: auto;
                 left: auto;
+
+                .small {
+                    writing-mode: lr;
+                    transform: rotate(0);
+                    margin: 10px 0;
+                }
+
+                .divider {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin: 0 10px;
+                    }
+                }
             }
         }
 
