@@ -3,6 +3,8 @@
         <swiper
             class="h-full"
             :modules="modules"
+            autoplay
+            loop
             :slides-per-view="1"
             :pagination="{ clickable: true }"
         >
@@ -34,11 +36,10 @@
 <script setup>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation, Pagination } from  'swiper/modules';
+import { Autoplay, Pagination } from  'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const viewport = useViewport()
@@ -48,23 +49,20 @@ const slides = ref([
         img: '/img/slide-2.jpeg',
         heading: 'Your dreams, crafted with passion and precision',
         subheading: 'Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.',
-        link: false
     },
     {
         img: '/img/slide-1.jpeg',
-        heading: ' Luxuriöses Villenanwesen im exquisiten Neuengland-Stil mit prachtvollen Gartenanlagen',
-        subheading: 'München – Obermenzing / Villenkolonie Hartmannshofen',
-        link: false
+        heading: 'Crafting Homes, Creating Memories',
+        subheading: 'Each project is more than construction; it\'s about building spaces where memories are made.',
     },
     {
         img: '/img/slide-3.jpeg',
-        heading: 'Als Immobilienmakler nicht nur in München zu Hause',
-        subheading: 'Berlin – Insel Schwanenwerder',
-        link: false
+        heading: 'Precision in Every Detail, Excellence in Every Build',
+        subheading: 'We focus on the fine details to deliver exceptional quality in every project',
     }
 ])
 
-const modules = [Navigation, Pagination]
+const modules = [Autoplay, Pagination]
 </script>
 
 <style>
