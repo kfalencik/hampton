@@ -3,7 +3,7 @@
         <template v-if="viewport.isGreaterOrEquals('tablet')">
             <div class="max-w-8xl mx-auto h-full">
                 <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
-                    <NuxtLink to="#home">
+                    <NuxtLink to="/">
                         <img src="/img/logo-headline.jpg" alt="Hamptons Construction Group" style="height: 90px"/>
                     </NuxtLink>
                     <div class="grow"></div>
@@ -15,7 +15,7 @@
             <div class="header-sticky text-xs" :class="{'header-sticky--active': fixed}">
                 <div class="max-w-8xl mx-auto h-full">
                     <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
-                        <NuxtLink class="grow mr-20" to="#home">
+                        <NuxtLink class="grow mr-20" to="/">
                             <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                         </NuxtLink>
                         <div class="grow"></div>
