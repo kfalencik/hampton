@@ -8,7 +8,14 @@
             </swiper-slide>
         </swiper>
         <div class="slideshow__sidebar bg-white fixed z-10 absolute flex flex-column items-center">
-            testtest 
+            <div class="small text-black text-uppercase font-bold text-spacing-340">Hamptons Construction Group</div>
+            <div class="divider"></div>
+            <ul class="list text-center">
+                <li><a href="#" class="bi-facebook"></a></li>
+                <li><a href="#" class="bi-twitter"></a></li>
+                <li><a href="#" class="bi-linkedin"></a></li>
+                <li><a href="#" class="bi-instagram"></a></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -54,6 +61,12 @@ const slides = ref([
             bottom: 0;
             left: 0;
             min-width: 80px;
+
+            .small {
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                white-space: nowrap;
+            }
 
             @media screen and (max-width: 768px) {
                 width: 100%;
