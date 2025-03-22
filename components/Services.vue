@@ -3,18 +3,45 @@
         <div class="max-w-8xl mx-auto text-center">
             <h2 class="mb-0">Services</h2>
             <small>With years of expertise in the industry, we have successfully delivered projects of all scales and complexities. At every step of the way, from design to completion, we are with you.</small>
-            <div class="services-wrapper my-4 mt-10" :class="[{'columns-2': viewport.matches('tablet', 'desktop')}, {'columns-3': viewport.isGreaterOrEquals('desktopMedium')}]">
-                <div v-for="(service, item) in services" :key="`service-${index}`" class="aspect-square py-10 text-center px-6">
-                    <i class="text-5xl text-secondary" :class="service.icon"></i>
-                    <h3 class="my-4">{{ service.heading }}</h3>
-                    <small>{{ service.subheading }}</small>
-                </div>
+            <div class="services-wrapper my-4 mt-10 items-start" :class="[{'columns-3': viewport.isGreaterOrEquals('desktopMedium')}]">
+                <swiper
+                    v-if="!viewport.isGreaterOrEquals('desktopMedium')"
+                    class="w-full"
+                    :modules="modules"
+                    loop
+                    :space-between="50"
+                    :slides-per-view="viewport.isGreaterThan('tablet') ? 2 : 1"
+                    :pagination="{ clickable: true }"
+                >
+                    <swiper-slide v-for="(service, index) in services" :key="`slideshow-slide-${index}`" class="py-10 mb-10 text-center">
+                        <i class="text-5xl text-secondary" :class="service.icon"></i>
+                        <h3 class="my-4">{{ service.heading }}</h3>
+                        <small>{{ service.subheading }}</small>
+                    </swiper-slide>
+                </swiper>
+                <template v-else>
+                    <div v-for="(service, item) in services" :key="`service-${index}`" class="aspect-square py-10 text-center px-6">
+                        <i class="text-5xl text-secondary" :class="service.icon"></i>
+                        <h3 class="my-4">{{ service.heading }}</h3>
+                        <small>{{ service.subheading }}</small>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { Pagination } from  'swiper/modules';
+
+    // Import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+
+    const modules = [Pagination]
+
     const viewport = useViewport()
 
     const services = computed(() => {
