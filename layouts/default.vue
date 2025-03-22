@@ -31,6 +31,16 @@
         line-height: 1.07143;
         letter-spacing: -.03em;
         margin-bottom: 25px;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 58px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 48px;
+        }
+
+        
     }
 
     h2, .h2 {
@@ -38,6 +48,10 @@
         line-height: 1.23;
         margin-bottom: 15px;
         letter-spacing: -.03em;
+
+        @media screen and (max-width: 768px) {
+            font-size: 28px;
+        }
     }
 
     h3, .h3 {
