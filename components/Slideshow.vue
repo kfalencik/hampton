@@ -37,19 +37,19 @@ import 'swiper/css';
 
 const slides = ref([
     {
-        img: '/img/slide-0.jpg',
+        img: '/img/slide-2.jpeg',
         heading: 'Your dreams, crafted with passion and precision',
         subheading: 'Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.',
         link: false
     },
     {
-        img: '/img/slide1.jpeg',
+        img: '/img/slide-1.jpeg',
         heading: ' Luxuriöses Villenanwesen im exquisiten Neuengland-Stil mit prachtvollen Gartenanlagen',
         subheading: 'München – Obermenzing / Villenkolonie Hartmannshofen',
         link: false
     },
     {
-        img: '/img/slide1.jpeg',
+        img: '/img/slide-3.jpeg',
         heading: 'Als Immobilienmakler nicht nur in München zu Hause',
         subheading: 'Berlin – Insel Schwanenwerder',
         link: false
@@ -65,7 +65,7 @@ const slides = ref([
             width: calc(100% - 80px);
             padding: 40px;
             top: 0;
-            background-color: rgba(2,78,123,0.7);
+            background-color: rgba(2,78,123,0.4);
 
             @media screen and (min-width: 1024px) {
                 width: calc(100% - 160px);
@@ -125,6 +125,7 @@ const slides = ref([
             object-fit: cover;
             width: 100%;
             height: 100%;
+            filter: blur(3px)
         }
 
         @media screen and (max-width: 1024px) {
