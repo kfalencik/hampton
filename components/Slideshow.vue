@@ -41,6 +41,18 @@ const slides = ref([
         heading: 'Your dreams, crafted with passion and precision',
         subheading: 'Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.',
         link: false
+    },
+    {
+        img: '/img/slide1.jpeg',
+        heading: ' Luxuriöses Villenanwesen im exquisiten Neuengland-Stil mit prachtvollen Gartenanlagen',
+        subheading: 'München – Obermenzing / Villenkolonie Hartmannshofen',
+        link: false
+    },
+    {
+        img: '/img/slide1.jpeg',
+        heading: 'Als Immobilienmakler nicht nur in München zu Hause',
+        subheading: 'Berlin – Insel Schwanenwerder',
+        link: false
     }
 ])
 </script>
