@@ -1,5 +1,5 @@
 <template>
-    <div id="hello" :class="{'py-20': viewport.isGreaterOrEquals('desktop')}" style="overflow: hidden">
+    <div id="hello" :class="[{'py-20': viewport.isGreaterOrEquals('desktop')}, {'py-5': viewport.isGreaterOrEquals('mobileMedium')}]" style="overflow: hidden">
         <div class="max-w-8xl p-5 py-15 mx-auto flex flex-col relative items-center" :class="{'flex-row': viewport.isGreaterOrEquals('desktop')}">
             <div class="hello-text">
                 <div class="divider-block">
@@ -30,7 +30,7 @@
     .hello-text {
         width: 65%;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             width: 100%;
             text-align: center;
         }
@@ -39,11 +39,11 @@
         margin-left: 30px;
         position: relative;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             margin-left: 0;
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
             display: flex;
         }
 
@@ -60,7 +60,7 @@
             width: 100%;
             margin: 15px 0;
 
-            @media screen and (min-width: 768px) and (max-width: 1024px) {
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
                 width: 50%;
                 margin: 15px;
             }

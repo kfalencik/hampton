@@ -1,6 +1,7 @@
 <template>
     <div class="slideshow w-full flex relative">
         <swiper
+            class="h-full"
             :modules="modules"
             :slides-per-view="1"
             :pagination="{ clickable: true }"
@@ -69,6 +70,7 @@ const modules = [Navigation, Pagination]
 <style>
     .slideshow {
         height: calc(100vh - 160px);
+        min-height: 500px;
 
         .swiper-button-prev {
             left: 25px;
@@ -89,6 +91,7 @@ const modules = [Navigation, Pagination]
         .overlay {
             width: calc(100% - 60px);
             padding: 30px;
+            padding-top: 8vh;
             top: 0;
             background-color: rgba(2,78,123,0.4);
 
@@ -109,6 +112,7 @@ const modules = [Navigation, Pagination]
 
         .swiper {
             margin-left: 6.25vw;
+            min-height: 500px;
 
             @media screen and (max-width: 1024px) {
                 margin-left: 0;
@@ -161,6 +165,7 @@ const modules = [Navigation, Pagination]
             object-fit: cover;
             width: 100%;
             height: 100%;
+            min-height: 500px;
             filter: blur(3px)
         }
 
