@@ -1,6 +1,6 @@
 <template>
     <header id="home" class="header font-bold top-0 w-screen z-20 uppercase text-sm">
-        <template v-if="viewport.isGreaterOrEquals('tablet')">
+        <template v-if="viewport.isGreaterOrEquals('desktop')">
             <div class="max-w-8xl mx-auto h-full">
                 <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                     <NuxtLink to="#home">

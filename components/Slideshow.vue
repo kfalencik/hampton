@@ -5,6 +5,14 @@
         >
             <swiper-slide v-for="(slide, index) in slides" :key="`slideshow-slide-${index}`">
                 <img :src="slide.img" />
+                <div class="overlay absolute h-full left-0">
+                    <div class="max-w-8xl mx-auto text-white">
+                        <div class="max-w-5xl">
+                            <h1 class="text-white">{{ slide.heading }}</h1>
+                            <p>{{ slide.subheading }}</p>
+                        </div>
+                    </div>
+                </div>
             </swiper-slide>
         </swiper>
         <div class="slideshow__sidebar bg-white fixed z-10 absolute flex flex-column items-center">
@@ -30,20 +38,8 @@ import 'swiper/css';
 const slides = ref([
     {
         img: '/img/slide-0.jpg',
-        heading: 'Als Immobilienmakler in München zu Hause',
-        subheading: 'München – Bogenhausen',
-        link: false
-    },
-    {
-        img: '/img/slide1.jpeg',
-        heading: ' Luxuriöses Villenanwesen im exquisiten Neuengland-Stil mit prachtvollen Gartenanlagen',
-        subheading: 'München – Obermenzing / Villenkolonie Hartmannshofen',
-        link: false
-    },
-    {
-        img: '/img/slide1.jpeg',
-        heading: 'Als Immobilienmakler nicht nur in München zu Hause',
-        subheading: 'Berlin – Insel Schwanenwerder',
+        heading: 'Your dreams, crafted with passion and precision',
+        subheading: 'Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.',
         link: false
     }
 ])
@@ -52,6 +48,24 @@ const slides = ref([
 <style scoped>
     .slideshow {
         height: calc(100vh - 160px);
+
+        .overlay {
+            width: calc(100% - 80px);
+            padding: 40px;
+            top: 0;
+            background-color: rgba(2,78,123,0.7);
+
+            @media screen and (min-width: 1024px) {
+                width: calc(100% - 160px);
+                padding-left: 120px;
+                padding-top: 25vh;
+            }
+
+            @media screen and (min-width: 1600px) {
+                padding-left: 100px;
+                width: calc(100% - 140px);
+            }
+        }
     
         &__sidebar {
             justify-content: center;
@@ -68,7 +82,7 @@ const slides = ref([
                 white-space: nowrap;
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1024px) {
                 width: 100%;
                 position: relative;
                 top: auto;
@@ -101,7 +115,7 @@ const slides = ref([
             height: 100%;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
             display: block;
             height: auto;
         }

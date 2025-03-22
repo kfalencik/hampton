@@ -28,6 +28,9 @@
 
     h1, .h1 {
         font-size: 84px;
+        line-height: 1.07143;
+        letter-spacing: -.03em;
+        margin-bottom: 25px;
     }
 
     h2, .h2 {
