@@ -6,7 +6,7 @@
             <p class="text-grey mx-auto mt-2 mb-16">Great projects start with great people. Our team is built on trust, skill, and a shared commitment to doing things the right way—bringing vision and expertise to every job.</p>
         </div>
             <div class="team-wrapper">
-                <div v-for="(person, index) in team" :key="`team-item-${index}`" class="pa-10 mb-10">
+                <div v-for="(person, index) in team" :key="`team-item-${index}`" class="mb-10 py-5" :class="[{'pa-10': viewport.isGreaterOrEquals('desktop')}]">
                     <div class="text-center mx-auto border-2" :class="[{'float-left mr-6': viewport.isGreaterOrEquals('desktop')}]" style="border-radius: 100%; overflow: hidden; width: 200px; height: 200px;">
                         <img :src="`/img/${person.img}`" />
                     </div>
