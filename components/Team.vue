@@ -7,10 +7,10 @@
         </div>
             <div class="team-wrapper">
                 <div v-for="(person, index) in team" :key="`team-item-${index}`" class="pa-10 mb-10">
-                    <div class="text-center mx-auto border-2" :class="[{'float-left mr-6': viewport.isGreaterOrEquals('desktop') && index != 1 }, {'float-right ml-6': viewport.isGreaterOrEquals('desktop') && index === 1 }]" style="border-radius: 100%; overflow: hidden; width: 200px; height: 200px;">
+                    <div class="text-center mx-auto border-2" :class="[{'float-left mr-6': viewport.isGreaterOrEquals('desktop')}]" style="border-radius: 100%; overflow: hidden; width: 200px; height: 200px;">
                         <img :src="`/img/${person.img}`" />
                     </div>
-                    <div :class="{'text-right': viewport.isGreaterOrEquals('desktop') && index === 1}">
+                    <div>
                         <h3 class="mt-4">{{ person.name }}</h3>
                         <small class="text-primary">{{ person.role }}</small>
                         <p class="mt-3">{{ person.description }}</p>
