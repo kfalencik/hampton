@@ -4,7 +4,7 @@
             <div class="max-w-8xl mx-auto h-full">
                 <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                     <NuxtLink to="/">
-                        <img src="/img/logo-headline.jpg" alt="Hamptons Construction Group" style="height: 90px"/>
+                        <img src="/img/logo.png" alt="Hamptons Construction Group" style="height: 90px"/>
                     </NuxtLink>
                     <div class="grow"></div>
                     <div>
@@ -16,7 +16,7 @@
                 <div class="max-w-8xl mx-auto h-full">
                     <nav class="px-6 py-4 h-full flex flex-auto justify-between items-center">
                         <NuxtLink class="grow mr-20" to="/">
-                            <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
+                            <img src="/img/logo-small.png" alt="Hamptons Construction Group" style="height: 40px"/>
                         </NuxtLink>
                         <div class="grow"></div>
                         <div>
@@ -29,12 +29,12 @@
         <div v-else class="flex py-3 p-5 justify-between items-center h-full sticky">
                 <div class="spacer" style="width: 36px;"></div>
                 <NuxtLink class="z-55" to="/" @click="mobileMenu = false">
-                    <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
+                    <img src="/img/logo-small.png" alt="Hamptons Construction Group" style="height: 40px"/>
                 </NuxtLink>
                 <button class="z-55" @click="mobileMenu = !mobileMenu"><i :class="`${mobileMenu ? 'bi-x-lg' : 'bi-list'} text-3xl`"></i></button>
                 <div v-if="mobileMenu" class="overlay fixed left-0 top-0 bottom-0 right-0 z-50 overflow-hidden" @click="mobileMenu = !mobileMenu">
                     <nav class="mt-30 flex flex-col text-center text-2xl">
-                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" class=" my-3" :class="`#${activeLink}` === link.link || !activeLink && index === 0 ? 'text-accent' : 'text-white'">{{ link.name }}</NuxtLink>
+                        <NuxtLink v-for="(link, index) in menuLinks" :key="`menu-links-${index}`" :to="link.link" class=" my-3" :class="`#${activeLink}` === link.link || !activeLink && index === 0 ? 'text-secondary' : 'text-white'">{{ link.name }}</NuxtLink>
                     </nav>
                 </div>
             </div>
@@ -132,8 +132,8 @@
     }
 
     .overlay {
-        background: rgba(2,78,123,0.4);
-        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(40px);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 </style>

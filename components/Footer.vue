@@ -3,7 +3,7 @@
         <Contact />
         <div class="max-w-8xl mx-auto text-center">
             <NuxtLink class="grow" to="/">
-                <img class="mx-auto mb-4" src="/img/logo.jpg" style="height: 40px;" alt="Hamptons Construction Group" />
+                <img class="mx-auto mb-4" src="/img/logo.png" style="height: 40px;" alt="Hamptons Construction Group" />
             </NuxtLink>
             <div class="text-xs">© Copyright Hamptons Construction Group {{ year }}</div>
         </div>
