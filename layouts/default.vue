@@ -10,6 +10,18 @@
     </transition>
 </template>
 
+<script>
+useHead({
+    meta: [
+        { property: 'og:title', content: 'Hamptons Construction Group | Your dreams, crafted with passion and precision' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'es_US' },
+        { property: 'og:URL', content: 'hamptonsconstructioncompany.com' },
+        { property: 'og:type', content: 'Hamptons Construction Group is a renowned construction company based in Naples, Florida, founded by three friends who combined their unique experiences to create a company capable of handling the most demanding projects. We specialize in home construction and high-end renovations, with a strong emphasis on top-quality and precision. Our projects are distinguished by attention to detail, the use of the finest materials, and unique solutions that meet the expectations of even the most discerning clients.' },
+    ]
+})
+</script>
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
