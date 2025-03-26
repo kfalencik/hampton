@@ -2,7 +2,7 @@
     <section id="services" class="bg-lightGrey" style="overflow: hidden">
         <div class="max-w-8xl mx-auto text-center">
             <h2 class="mb-0">Services</h2>
-            <small>With years of expertise in the industry, we have successfully delivered projects of all scales and complexities. At every step of the way, from design to completion, we are with you.</small>
+            <p class="text-grey text-center max-w-4xl mx-auto mt-2 mb-8">With years of expertise in the industry, we have successfully delivered projects of all scales and complexities. At every step of the way, from design to completion, we are with you.</p>
             <div class="services-wrapper my-4 mt-10 items-start" :class="[{'columns-3': viewport.isGreaterOrEquals('desktopMedium')}]">
                 <swiper
                     v-if="!viewport.isGreaterOrEquals('desktopMedium')"

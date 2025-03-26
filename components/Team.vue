@@ -1,7 +1,8 @@
 <template>
-    <section id="team" class="bg-white" style="overflow: hidden">
+    <section id="our-team" class="bg-white" style="overflow: hidden">
         <div class="max-w-8xl mx-auto">
-            <h2 class="mb-0 text-center">Our Team</h2>
+            <h2 class="mb-0 text-center">Meet Our Team!</h2>
+            <p class="text-grey text-center max-w-4xl mx-auto mt-2 mb-8">Great projects start with great people. Our team is built on trust, skill, and a shared commitment to doing things the right way—bringing vision and expertise to every job.</p>
             <div class="team-wrapper">
                 <div v-for="(person, index) in team" :key="`team-item-${index}`" class="pa-10 mb-10">
                     <div class="text-center mx-auto border-2" :class="[{'float-left mr-6': viewport.isGreaterOrEquals('desktop') && index != 1 }, {'float-right ml-6': viewport.isGreaterOrEquals('desktop') && index === 1 }]" style="border-radius: 100%; overflow: hidden; width: 200px; height: 200px;">
