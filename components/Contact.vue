@@ -18,7 +18,7 @@
                         </div>
                     </v-form>
                 </div>
-                <div :style="viewport.isGreaterOrEquals('desktop') ? 'width: 400px' : 'padding-top: 50px;'">
+                <div :style="viewport.isGreaterOrEquals('desktop') ? 'width: 400px' : 'padding-top: 50px;'" :class="viewport.isGreaterOrEquals('tablet') ? 'text-md' : 'text-sm text-center'">
                     <p><i class="bi-map mr-2 text-secondary"></i>304 Nason Ln, 34112 Naples, Florida</p>
                     <p><i class="bi-telephone mr-2 text-secondary"></i>(239) 298 0887</p>
                     <p><i class="bi-envelope mr-2 text-secondary"></i>pfalencik@hamptonconstructiongroup.com</p>
