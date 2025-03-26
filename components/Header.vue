@@ -18,7 +18,6 @@
                         <NuxtLink class="grow mr-20" to="/">
                             <img src="/img/logo.jpg" alt="Hamptons Construction Group" style="height: 40px"/>
                         </NuxtLink>
-                        {{ activeLink }}
                         <div class="grow"></div>
                         <div>
                             <NuxtLink v-for="(link, index) in menuLinks" class="ml-10" :key="`menu-links-${index}`" :to="link.link" :class="{'text-primary': `#${activeLink}` === link.link || !activeLink && index === 0}">{{ link.name }}</NuxtLink>
