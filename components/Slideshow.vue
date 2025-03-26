@@ -9,7 +9,7 @@
             :pagination="{ clickable: true }"
         >
             <swiper-slide v-for="(slide, index) in slides" :key="`slideshow-slide-${index}`">
-                <img :src="slide.img" />
+                <img :src="slide.img" :alt="slide.heading" />
                 <div class="overlay absolute h-full left-0">
                     <div class="max-w-8xl mx-auto text-white px-4">
                         <div class="max-w-5xl">
@@ -24,10 +24,10 @@
             <div class="small text-black text-uppercase font-bold text-spacing-340 py-3">Hamptons Construction Group</div>
             <div class="divider divider--vertical"></div>
             <ul class="list text-center">
-                <li><a href="#" class="bi-facebook"></a></li>
-                <li><a href="#" class="bi-twitter"></a></li>
-                <li><a href="#" class="bi-linkedin"></a></li>
-                <li><a href="#" class="bi-instagram"></a></li>
+                <li><a href="#" class="bi-facebook" title="Faceboook"></a></li>
+                <li><a href="#" class="bi-twitter" title="Twitter"></a></li>
+                <li><a href="#" class="bi-linkedin" title="LinkedIn"></a></li>
+                <li><a href="#" class="bi-instagram" title="Instagram"></a></li>
             </ul>
         </div>
     </section>
