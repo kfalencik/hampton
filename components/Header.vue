@@ -75,7 +75,7 @@
         },
         {
             name: 'Contact',
-            link: '#about-us'
+            link: '#contact'
         }
     ]
     

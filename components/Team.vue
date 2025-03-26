@@ -3,7 +3,7 @@
         <div class="max-w-8xl mx-auto">
             <div class="divider-block">
             <h2 class="mb-0">Meet Our Team!</h2>
-            <p class="text-grey mx-auto mt-2 mb-8">Great projects start with great people. Our team is built on trust, skill, and a shared commitment to doing things the right way—bringing vision and expertise to every job.</p>
+            <p class="text-grey mx-auto mt-2 mb-16">Great projects start with great people. Our team is built on trust, skill, and a shared commitment to doing things the right way—bringing vision and expertise to every job.</p>
         </div>
             <div class="team-wrapper">
                 <div v-for="(person, index) in team" :key="`team-item-${index}`" class="pa-10 mb-10">

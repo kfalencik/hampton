@@ -1,6 +1,7 @@
 <template>
-    <footer class="bg-primary text-white p-5 py-8 text-center">
-        <div class="max-w-8xl mx-auto">
+    <footer class=" text-white p-5 py-8" :class="[{'mr-40': viewport.isGreaterOrEquals('desktopWide')}]" style="background-color: #060e2b">
+        <Contact />
+        <div class="max-w-8xl mx-auto text-center">
             <NuxtLink class="grow" to="/">
                 <img class="mx-auto mb-4" src="/img/logo.jpg" style="height: 40px;" alt="Hamptons Construction Group" />
             </NuxtLink>
@@ -11,6 +12,8 @@
 
 <script setup>
     import { ref } from 'vue';
+
+    const viewport = useViewport()
 
     const year = ref(new Date().getFullYear())
 </script>
