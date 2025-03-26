@@ -3,7 +3,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     head: {
-      htmlAttrs: { dir: 'ltr', lang: 'de' },
+      htmlAttrs: { dir: 'ltr', lang: 'en' },
       link: [{ rel: 'icon', type: 'image/png', href: "/favicon.png" }]
   },
 },

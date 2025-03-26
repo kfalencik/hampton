@@ -12,10 +12,10 @@
             </div>
             <div class="grow hello-pictures">
                 <div class="hello-pictures__picture">
-                    <img class="mb-5" src="/img/hello-1.jpeg" />
+                    <img class="mb-5" src="/img/hello-1.jpeg" alt="Project picture 1" />
                 </div>
                 <div class="hello-pictures__picture">
-                    <img src="/img/hello-2.jpeg" />
+                    <img src="/img/hello-2.jpeg" alt="Project picture 2" />
                 </div>
             </div>
         </div>

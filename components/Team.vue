@@ -8,7 +8,7 @@
             <div class="team-wrapper">
                 <div v-for="(person, index) in team" :key="`team-item-${index}`" class="mb-10 py-5" :class="[{'pa-10': viewport.isGreaterOrEquals('desktop')}]">
                     <div class="text-center mx-auto border-2" :class="[{'float-left mr-6': viewport.isGreaterOrEquals('desktop')}]" style="border-radius: 100%; overflow: hidden; width: 200px; height: 200px;">
-                        <img :src="`/img/${person.img}`" />
+                        <img :src="`/img/${person.img}`" :alt="person.name" />
                     </div>
                     <div>
                         <h3 class="mt-4">{{ person.name }}</h3>
