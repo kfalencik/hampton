@@ -39,7 +39,7 @@
             description: 'Peter is responsible for shaping the vision of each project and overseeing its execution, ensuring every detail meets the highest standards. With extensive experience in modern, innovative design, he has successfully led the company in Europe since 2000.'
         },
         {
-            img: 'sergey.jpeg',
+            img: 'default-user.png',
             name: 'Sergey Pratasenia',
             role: 'Project Manager',
             description: 'Sergey is responsible for overseeing projects and ensuring they are completed on time and within budget. With a keen eye on the financial aspects, he ensures that every project runs smoothly and efficiently.'
