@@ -1,6 +1,6 @@
 <template>
     <section id="hello" style="overflow: hidden">
-        <div class="max-w-8xl mx-auto flex flex-col relative items-center" :class="{'flex-row': viewport.isGreaterOrEquals('desktop')}">
+        <div class="max-w-8xl mx-auto flex flex-col relative items-center" :class="{'flex-row py-15': viewport.isGreaterOrEquals('desktop')}">
             <div class="hello-text">
                 <div class="divider-block">
                     <h2>Hampton Construction Group is a renowned construction company based in Naples, Florida</h2>
