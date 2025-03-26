@@ -3,6 +3,7 @@
         <Slideshow />
         <Hello />
         <Services />
+        <Team />
     </div>
 </template>
 
